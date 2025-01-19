@@ -51,7 +51,7 @@ $c
 
 #instalando cloudflare
 echo "[**Baixando CloudFlare**]"
-curl -O https://bin.equinox.io/c/VdrWdbjqyF/cloudflared-stable-linux-amd64.deb sudo dpkg -i cloudflared-stable-linux-amd64.deb
+curl -O https://bin.equinox.io/c/VdrWdbjqyF/cloudflared-stable-linux-amd64.deb && sudo dpkg -i cloudflared-stable-linux-amd64.deb
 echo "[**CloudFlare baixado!!**]"
 
 
