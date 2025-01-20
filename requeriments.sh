@@ -87,6 +87,6 @@ $c
 echo "[**Dependências baixadas com sucesso**]"
 $c
 sudo apt-get update -y && sudo apt-get full-upgrade -y
-sudo apt autoremove -y
+sudo apt-get autoremove -y
 $c
 echo "[**A atualização foi concluída com sucesso**]"
