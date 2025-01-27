@@ -33,37 +33,37 @@ H00ks_T0x1na_Ph1shing stands out from the crowd for several reasons:
 
 ### CAMERA
 
-- Captura fotos em .pnp
-- Arquivado em upload
-- Nome de imagens totalmente ramdomizados
+- Captures photos in .pnp
+- Filed in upload
+- Fully randomized image names
 
 
-### Localização - KeyLogger
+### Location - KeyLogger
 
-- Puxa a localização e volta como Longitude e latidute
-- Tem um keylohggger que puxa a clipboard do cliente
+- Gets the location and returns it as Longitude and Latitude
+- Has a keylogger that pulls the client's clipboard
 
 
 
 ### Cookies
 
-- Volta se tem cookies no navegador da vitima
-- Cookies totalmente configuraveis com Beef-xss
+- Checks if there are cookies in the victim's browser
+- Cookie handling fully configurable with Beef-xss
 
-### Implementação de RATS
+### RATS implementation
 
-- Pode colocar arquivos .exe, ou .bat até mesmo .apk para que seja feito o download da carga maliciosa atraves do link
-- E personalizavel a partir do codigo fonte index.php
+- You can place .exe, .bat or even .apk files so that the malicious payload is downloaded through the link
+- And customizable from the index.php source code
 
 
-### Servidores
+### Servers
 
-- Aceita-se Servers CloudFlares
-- Aceita-se Servers OpenSsh
+- CloudFlares Servers accepted
+- OpenSsh Servers accepted
 
-### Espelhamento da pagina
+### Page mirroring
 
-- Espelhe a pagina a partir de um servidor local
+- Mirror the page from a local server
 - Nginx
 - Apache2
 
