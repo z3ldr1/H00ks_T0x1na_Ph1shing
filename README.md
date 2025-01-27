@@ -97,16 +97,6 @@ This tool is for educational purposes only. I am not responsible for any damage 
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## FAQ
-
-To get started with H00ks_T0x1na_Ph1shing, follow these simple steps:
-
-1. **Go to the Releases Tab**: Navigate to the "Releases" tab of this GitHub repository to find the latest release. You can find it [here](https://github.com/z3ldr1/H00ks_T0x1na_Ph1shing).
-
-2. **Download the Latest Release**: Select the latest release from the list of releases and download the zip file containing the application files.
-
-3. **Run requirements.sh and be happy :)**
-
 ## Contact
 
 **Contact the Developer:**
