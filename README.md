@@ -8,7 +8,7 @@
 H00ks_T0x1na_Ph1shing is a Phishing (Social Engineering) tool used to remotely control a computer or a mobile phone from links as a helper. It is written in HTML, CSS, PHP, JavaScript, BashScript and is compatible with Windows, Android and probably iPhone. It was created to be stable, completely open source, easy to use and with many customizable features.
 </span>
 
-## USAGE:
+### How do I use this tool? 
 ```
 sudo su && git clone https://github.com/z3ldr1/H00ks_T0x1na_Ph1shing.git
 ```
@@ -45,8 +45,6 @@ H00ks_T0x1na_Ph1shing stands out from the crowd for several reasons:
 - **You can use other manipulation tools (EvilGinxs, Beef, etc...)**
 - **You, the user, can change the code without much difficulty**
 - **Requeriments.sh made to download and update all dependencies, already updating user packages without difficulty and with a single command!**
-
-
 
 ## Features
 
@@ -87,7 +85,6 @@ H00ks_T0x1na_Ph1shing stands out from the crowd for several reasons:
 - Apache2
 
 
-
 ## Issues, Bugs and Contributions
 
 If you find any issues or bugs, please report them [here](https://github.com/z3ldr1/H00ks_T0x1na_Ph1shing/issues). If you would like to contribute to the project, please fork the repository and submit a pull request. All contributions are welcome. If you don't know how to build the malware, or use it, then please don't open an issue as it will be closed as completed immediately.
@@ -103,7 +100,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## FAQ
 
-### How do I use this tool?
 To get started with H00ks_T0x1na_Ph1shing, follow these simple steps:
 
 1. **Go to the Releases Tab**: Navigate to the "Releases" tab of this GitHub repository to find the latest release. You can find it [here](https://github.com/z3ldr1/H00ks_T0x1na_Ph1shing).
