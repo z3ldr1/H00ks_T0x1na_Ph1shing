@@ -16,7 +16,7 @@ H00ks_T0x1na_Ph1shing stands out from the crowd for several reasons:
 - **Easy portability**
 - **Totally versatile**
 - **Functions with implementation of trojans**
-- **Tool stands out from the rest**
+- **Tool stands out from the rest (Seeker, Setoolkit, Beef-Xss, MaxPhisher, Zphisher, CamHacker and so on...)**
 - **Does everything that the others do (such as capturing cookies, capturing geolocation, capturing the clipboard, forms, and sending trojans without user interaction)**
 - **Totally open source and customizable to your taste**
 - **Well-made styling and without many frills**
