@@ -31,7 +31,7 @@ Porem salve a imagem do fundo da pagina sempre como "1.jpg"
 ![image](https://github.com/user-attachments/assets/1a344a19-07b0-49e2-affa-de85070b45bd)
 
 
-Volta as informaçoes em dados.txt... Localização (volta em longitude e a latitude (Localização: Lat: loc do alvo Long: loc do alvo)), se tem cookies no navegador, volta o formulario digitado, e a clipboard da vitima .... ![git](https://github.com/user-attachments/assets/280c999c-68cd-499e-88e4-71345c77ea04)
+Volta as informaçoes em dados.txt... Localização (volta em longitude e a latitude (Localização: Lat: loc do alvo Long: loc do alvo)), se tem cookies no navegador, volta o formulario digitado, sobe uma carga maliciosa no dispositivo da vitima pelo navegador, e captura a clipboard da vitima .... ![git](https://github.com/user-attachments/assets/280c999c-68cd-499e-88e4-71345c77ea04)
 
 Com Cloud Flare:
 
