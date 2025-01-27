@@ -4,13 +4,20 @@ Ferramenta de Phsishing Completa e Personalizavel e de Codigo livre.
 ![git-2](https://github.com/user-attachments/assets/fd355633-7191-4e43-9383-8ad5a1cb1107)
 
 Precisa de um servidor externo como na foto cloudflare mas podem ser outros como OpenSSH.... 
-![image](https://github.com/user-attachments/assets/2f8fbf71-55bf-4b95-93e2-cdd57d49754f)
+[...]
+![git-4](https://github.com/user-attachments/assets/52485404-da41-4b37-b284-8ac0cf4badb6)
+
 
 
 Necessita do php para coletar os dados....
 
+[...]
 
-![image](https://github.com/user-attachments/assets/90cd1590-dd47-4f30-af08-9e9e5ba9691f)
+![git-5](https://github.com/user-attachments/assets/36866786-795e-4b70-af9a-5227213146e4)
+
+
+
+
 
 
 
@@ -22,7 +29,8 @@ Porem salve a imagem do fundo da pagina sempre como "1.jpg" e coloquem o arquivo
 
 
 
-Volta as informaçoes em dados.txt... Localização (volta em longitude e a latitude (Localização: Lat: loc do alvo Long: loc do alvo)), se tem cookies no navegador, volta o formulario digitado, sobe uma carga maliciosa no dispositivo da vitima pelo navegador, e captura a clipboard da vitima .... ![git](https://github.com/user-attachments/assets/280c999c-68cd-499e-88e4-71345c77ea04)
+Volta as informaçoes em dados.txt... Localização (volta em longitude e a latitude (Localização: Lat: loc do alvo Long: loc do alvo)), se tem cookies no navegador, volta o formulario digitado, sobe uma carga maliciosa no dispositivo da vitima pelo navegador, e captura a clipboard da vitima .... ![git](https://github.com/user-attachments/assets/fa257869-aafb-4b1c-a28b-029a872c6b15)
+
 
 Com Cloud Flare:
 
