@@ -5,8 +5,7 @@
 <img src="./logo.png" width=200 alt=" Logo"/>
 </p>
 <span>
-H00ks_T0x1na_Ph1shing is a Phishing (Social Engineering) tool used to remotely control a computer or a mobile phone from links as a helper. It is written in HTML, CSS, PHP, JavaScript, BashScript and is compatible with Windows, Android and probably iPhone. It was created to be stable, completely open source, easy to use and with many customizable features.
-</span>
+H00ks_T0x1na_Ph1shing is a Phishing (Social Engineering) tool used to remotely control a computer or a mobile phone from links as a helper. It is written in HTML, CSS, PHP, JavaScript, BashScript and is compatible with Windows, Android and probably iPhone. It was created to be stable, completely open source, easy to use and with many customizable features. </span> </br> </br>
 
 ### How do I use this tool? 
 ```
