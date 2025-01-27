@@ -22,12 +22,7 @@ Necessita do php para coletar os dados....
 Ferramenta completa de coleta de dados, desde informções do formulario que é personalizavel, tem coleta de localização, cookies do navegador (Não manipulavel, favor cofigurar corretamente no beef).... E personalizavel ao ponto de poder trocar a imagem de fundo
 
 
-
-
-
-
-
-Porem salve a imagem do fundo da pagina sempre como "1.jpg" 
+Porem salve a imagem do fundo da pagina sempre como "1.jpg" e coloquem o arquivo malicioso como "arquivo.exe" ou troquem se quiserem o arquivo "arquivo.exe" no codigo da pagina
 ![image](https://github.com/user-attachments/assets/1a344a19-07b0-49e2-affa-de85070b45bd)
 
 
