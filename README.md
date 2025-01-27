@@ -1,4 +1,4 @@
-# H00ks_T0x1na_Ph1shing
+![git-2](https://github.com/user-attachments/assets/fd355633-7191-4e43-9383-8ad5a1cb1107)# H00ks_T0x1na_Ph1shing
 Ferramenta de Phsishing Completa e Personalizavel e de Codigo livre.
 
 Precisa de um servidor externo como na foto cloudflare mas podem ser outros como OpenSSH.... 
@@ -18,7 +18,9 @@ Necessita do php para coletar os dados....
 
 
 Ferramenta completa de coleta de dados, desde informções do formulario que é personalizavel, tem coleta de localização, cookies do navegador (Não manipulavel, favor cofigurar corretamente no beef).... E personalizavel ao ponto de poder trocar a imagem de fundo
-![image](https://github.com/user-attachments/assets/efa214f0-a8d5-44b8-903f-02e30a27a169)
+
+
+
 
 
 
@@ -27,7 +29,7 @@ Porem salve a imagem do fundo da pagina sempre como "1.jpg"
 ![image](https://github.com/user-attachments/assets/1a344a19-07b0-49e2-affa-de85070b45bd)
 
 
-Volta as informaçoes em dados.txt... Localização (volta em longitude e a latitude (Localização: Lat: loc do alvo Long: loc do alvo)), se tem cookies no navegador, volta o formulario digitado, e a clipboard da vitima .... ![image](https://github.com/user-attachments/assets/bc3dceda-1f54-4929-9178-3e16d5a70ca0)
+Volta as informaçoes em dados.txt... Localização (volta em longitude e a latitude (Localização: Lat: loc do alvo Long: loc do alvo)), se tem cookies no navegador, volta o formulario digitado, e a clipboard da vitima .... ![git](https://github.com/user-attachments/assets/280c999c-68cd-499e-88e4-71345c77ea04)
 
 Com Cloud Flare:
 
