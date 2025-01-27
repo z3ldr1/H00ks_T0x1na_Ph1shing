@@ -13,19 +13,19 @@ H00ks_T0x1na_Ph1shing is a Phishing (Social Engineering) tool used to remotely c
 
 H00ks_T0x1na_Ph1shing stands out from the crowd for several reasons:
 
-- **Easy portability
-- **Totally versatile
-- **Functions with implementation of trojans
-- **Tool stands out from the rest
-- **Does everything that the others do (such as capturing cookies, capturing geolocation, capturing the clipboard, forms, and sending trojans without user interaction)
-- **Totally open source and customizable to your taste
-- **Well-made styling and without many frills
-- **Constant support and updates of the tool
-- **Easy to produce the link
-- **Receives data from PhP to the data.txt file
-- **You can use other manipulation tools (EvilGinxs, Beef, etc...)
-- **You, the user, can change the code without much difficulty
-- **Requeriments.sh made to download and update all dependencies, already updating user packages without difficulty and with a single command!
+- **Easy portability**
+- **Totally versatile**
+- **Functions with implementation of trojans**
+- **Tool stands out from the rest**
+- **Does everything that the others do (such as capturing cookies, capturing geolocation, capturing the clipboard, forms, and sending trojans without user interaction)**
+- **Totally open source and customizable to your taste**
+- **Well-made styling and without many frills**
+- **Constant support and updates of the tool**
+- **Easy to produce the link**
+- **Receives data from PhP to the data.txt file**
+- **You can use other manipulation tools (EvilGinxs, Beef, etc...)**
+- **You, the user, can change the code without much difficulty**
+- **Requeriments.sh made to download and update all dependencies, already updating user packages without difficulty and with a single command!**
 
 
 
@@ -91,7 +91,7 @@ To get started with H00ks_T0x1na_Ph1shing, follow these simple steps:
 
 2. **Download the Latest Release**: Select the latest release from the list of releases and download the zip file containing the application files.
 
-3. **Run requirements.sh and be happy :)
+3. **Run requirements.sh and be happy :)**
 
 ## Contact
 
