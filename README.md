@@ -22,6 +22,7 @@ cd H00ks_T0x1na_Ph1shing && ./requeriments.sh
 ```
 cd /var/wwww/html/page-fake && cat dados.txt
 ```
+###It only works in Linux environment
 
 ### Etical Disclamer
 Remember that this was made for ethical and moral use, I am not responsible for the misuse of the tool!
@@ -86,6 +87,14 @@ H00ks_T0x1na_Ph1shing stands out from the crowd for several reasons:
 - Mirror the page from a local server
 - Nginx
 - Apache2
+
+
+
+### Examples
+
+- ![image](https://github.com/user-attachments/assets/4036ecd4-0992-40fd-800f-3b902e2831d6)
+- ![image](https://github.com/user-attachments/assets/0d0c0a0b-5039-4fc9-bd08-73910a99c06f)
+
 
 
 ## Issues, Bugs and Contributions
