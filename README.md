@@ -8,7 +8,7 @@ H00ks_T0x1na_Ph1shing is a Phishing (Social Engineering) tool used to remotely c
 
 ### How do I use this tool? 
 ```
-sudo su && git clone https://github.com/z3ldr1/H00ks_T0x1na_Ph1shing.git
+sudo git clone https://github.com/z3ldr1/H00ks_T0x1na_Ph1shing.git
 ```
 ```
 cd H00ks_T0x1na_Ph1shing && ./requeriments.sh
