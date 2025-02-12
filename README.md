@@ -1,15 +1,14 @@
-
-# H00ks_T0x1na_Ph1shing
+# Alpha H00ks_T0x1na_Ph1shing V0.1
 
 <p align='center'>
-<img src="./IMG-20240913-WA0030.jpg" width=200 alt=" Logo"/>
+<img src="./logo.jpg" width=200 alt=" Logo"/>
 </p>
 <span>
-H00ks_T0x1na_Ph1shing is a Phishing (Social Engineering) tool used to remotely control a computer or a mobile phone from links as a helper. It is written in HTML, CSS, PHP, JavaScript, BashScript and is compatible with Windows, Android and probably iPhone. It was created to be stable, completely open source, easy to use and with many customizable features. </span> </br> </br>
+H00ks_T0x1na_Ph1shing is a Phishing (Social Engineering) tool used to remotely control a computer or a mobile phone from links as a helper. It is written in HTML, CSS, PHP, JavaScript, BashScript and is compatible with Windows, Android and probably iPhone. It was created to be stable, completely open source, easy to use and with many customizable features. Improvements added in the Alpha 0.1 version... Now having an internal API of models, where there will be a "graphical interface" "setup.sh" where the user can choose the Specific social engineering or choose the complete one, number 2 is still under development.... </span> </br> </br>
 
 ### How do I use this tool? 
 ```
-sudo su && git clone https://github.com/z3ldr1/H00ks_T0x1na_Ph1shing.git
+sudo su && git clone https://github.com/cesarbtakeda/H00ks_T0x1na_Ph1shing.git
 ```
 ```
 cd H00ks_T0x1na_Ph1shing && ./requeriments.sh
@@ -25,6 +24,8 @@ cd /var/www/html/page && php -S localhost:8080
 ```
 cd /var/www/html/page && cloudflare tunnel --url localhost:8080
 ```
+### Etical Disclamer
+Remember that this was made for ethical and moral use, I am not responsible for the misuse of the tool!
 
 
 ## What H00ks_T0x1na_Ph1shing Apart
@@ -49,7 +50,7 @@ H00ks_T0x1na_Ph1shing stands out from the crowd for several reasons:
 
 ### CAMERA
 
-- Captures photos in .pnp
+- Captures photos in .png
 - Filed in upload
 - Fully randomized image names
 
@@ -77,6 +78,10 @@ H00ks_T0x1na_Ph1shing stands out from the crowd for several reasons:
 - CloudFlares Servers accepted
 - OpenSsh Servers accepted
 
+### (IPS) Capture Internet Provider
+- Location
+- Location close to internet provider
+
 ### Page mirroring
 
 - Mirror the page from a local server
@@ -86,7 +91,7 @@ H00ks_T0x1na_Ph1shing stands out from the crowd for several reasons:
 
 ## Issues, Bugs and Contributions
 
-If you find any issues or bugs, please report them [here](https://github.com/z3ldr1/H00ks_T0x1na_Ph1shing/issues). If you would like to contribute to the project, please fork the repository and submit a pull request. All contributions are welcome. If you don't know how to build the malware, or use it, then please don't open an issue as it will be closed as completed immediately.
+If you find any issues or bugs, please report them [here](https://github.com/cesarbtakeda/H00ks_T0x1na_Ph1shing/issues). If you would like to contribute to the project, please fork the repository and submit a pull request. All contributions are welcome. If you don't know how to build the malware, or use it, then please don't open an issue as it will be closed as completed immediately.
 If you like the project, please leave a star!
 
 ## Legal Disclaimer
@@ -96,10 +101,4 @@ This tool is for educational purposes only. I am not responsible for any damage 
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## Contact
-
-**Contact the Developer:**
-- **Telegram:** [@Z3ldr1s](https://t.me/@Z3ldr1s)
-- **Discord:** zeldr1s_prime
 
