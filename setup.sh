@@ -173,7 +173,7 @@ process_model_choice() {
             echo "[**Apache carregado com sucesso**]"
             $TERMINAL -e "bash -c 'php -S localhost:8080; exec bash'" &
             $TERMINAL -e "bash -c 'cloudflare tunnel --url localhost:8080; exec bash'" &
-            $TERMINAL -- "bash" &
+            $TERMINAL
 
             ;;
         2)
