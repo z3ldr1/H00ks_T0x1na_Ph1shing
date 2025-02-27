@@ -12,10 +12,10 @@ H00ks_T0x1na_Ph1shing is a Phishing (Social Engineering) tool used to remotely c
 sudo git clone https://github.com/z3ldr1/H00ks_T0x1na_Ph1shing.git
 ```
 ```
-cd H00ks_T0x1na_Ph1shing && ./requeriments.sh
+cd H00ks_T0x1na_Ph1shing && sudo bash ./requeriments.sh
 ```
 ```
-bash setup.sh 
+sudo bash ./setup.sh 
 ```
 
 ### It only works in Linux environment
