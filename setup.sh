@@ -172,7 +172,7 @@ process_model_choice() {
             systemctl enable apache2.service
             echo "[**Apache carregado com sucesso**]"
             $TERMINAL -e "bash -c 'php -S localhost:8080; exec bash'" &
-            $TERMINAL -e "bash -c 'cloudflare tunnel --url localhost:8080'" &
+            $TERMINAL -e "bash -c 'cloudflare tunnel --url localhost:8080; exec bash'" &
             $TERMINAL -- "bash" &
 
             ;;
