@@ -9,9 +9,13 @@ type_egs="API/models"  # Local dos modelos
 apache="/var/www/html/page-fake"  # Local do apache
 c="clear" # Limpar
 
+
+#Nivel de permissão de arquivos
+chmod +x $apache/*
+
 ## Criando pastas
 echo "[** criando nova pasta para o modelo **]"
-mkdir /var/www/html/page-fake
+mkdir $apache
 echo "[** Modelo criado com sucesso **]"
 $c
 
@@ -115,8 +119,6 @@ process_main_choice() {
      1)
             echo -e "${GREEN}${NC}" 
             cp "$type_models/1.jpg" "$apache"  
-            
-            
             ;;
         2)
             echo -e "${GREEN}${NC}"
