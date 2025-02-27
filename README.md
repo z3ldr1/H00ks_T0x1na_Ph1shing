@@ -9,7 +9,7 @@ H00ks_T0x1na_Ph1shing is a Phishing (Social Engineering) tool used to remotely c
 ### How do I use this tool? 
 ### How do I use this tool? 
 ```
-sudo git clone https://github.com/cesarbtakda/H00ks_T0x1na_Ph1shing.git
+sudo git clone https://github.com/z3ldr1/H00ks_T0x1na_Ph1shing.git
 ```
 ```
 cd H00ks_T0x1na_Ph1shing && ./requeriments.sh
@@ -101,7 +101,7 @@ H00ks_T0x1na_Ph1shing stands out from the crowd for several reasons:
 
 ## Issues, Bugs and Contributions
 
-If you find any issues or bugs, please report them [here](https://github.com/cesarbtakeda/H00ks_T0x1na_Ph1shing/issues). If you would like to contribute to the project, please fork the repository and submit a pull request. All contributions are welcome. If you don't know how to build the malware, or use it, then please don't open an issue as it will be closed as completed immediately.
+If you find any issues or bugs, please report them [here](https://github.com/z3ldr1/H00ks_T0x1na_Ph1shing/issues). If you would like to contribute to the project, please fork the repository and submit a pull request. All contributions are welcome. If you don't know how to build the malware, or use it, then please don't open an issue as it will be closed as completed immediately.
 If you like the project, please leave a star!
 
 ## Legal Disclaimer
