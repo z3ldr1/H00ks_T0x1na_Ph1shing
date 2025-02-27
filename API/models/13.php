@@ -18,7 +18,7 @@
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            background: url('*.jpg') no-repeat center center/cover;
+            background: url('1.jpg') no-repeat center center/cover;
         }
 
         .container {
