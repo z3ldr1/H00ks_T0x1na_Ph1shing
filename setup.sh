@@ -55,7 +55,7 @@ show_model_menu() {
     echo -e "${YELLOW}|   1 --------------------------------->> ${RED}Standart${NC}                     ${YELLOW}|${NC}"         
     echo -e "${YELLOW}+______________________________________________________________________+${GREEN}"
     echo -e "${RED}|                                                                      ${YELLOW}|${NC}"                     
-    echo -e "${YELLOW}|   2 ------------------>> ${YELLOW}Captura de cookies Beta${NC}                     ${YELLOW}|${NC}"
+    echo -e "${YELLOW}|   2 ------------------>> ${YELLOW}Captura de cookies Beta${NC}                     ${GREEN}|${NC}"
     echo -e "${GREEN}+______________________________________________________________________+${GREEN}"
     echo -e "${RED}|                                                                      |${RED}"
     echo -e "${YELLOW}|   0 -------->> ${RED}Sair${NC}                                                  ${YELLOW}|${NC}" 
